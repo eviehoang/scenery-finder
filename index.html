@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <title>Scenery Finder</title>
 </head>
 
 <body>
-    <header>
+    <header class="col-12">
         <h1>placeholder for a header </h1>
         <nav>
             <li><a href="#">Home</a></li>
@@ -19,30 +21,38 @@
     </header>
 
     <main>
-        <div>
-            <h2>Welcome to Scenery</h2>
-            <p> description of site</p>
+        <div class="row">
+            <div class="col-3" id="welcome">
+                <h2>Welcome to Scenery</h2>
+                <p> description of site</p>
+            </div>
         </div>
-    <div class="">
-        <!-- h2 -->
-<!-- carousel header -->
-    </div>
-    <div>
-<!-- imgs -->
-<!-- swipe btn -->
+        <div class="row">
+            <div class="col-9" id='carousel'>
+                <h2>Swipe for your next destination</h2>
+            </div>
+            <div>
+                <!-- imgs -->
+                <!-- swipe btn -->
 
-    </div>
-    <!-- <div id="" class=" modal"> -->
-       <!-- modal btn --> 
-       <!-- modal content -->
-    </div>
+            </div>
+            <div>
+                <!-- <div id="" class=" modal"> -->
+                <!-- modal btn -->
+                <!-- modal content -->
+            </div>
+        </div>
     </main>
 
     <footer>
-        <span>Thanks for visisting!</span>
-        <!-- <p> Stay connected with:</p> -->
+        <div class="row-4">
+            <div class="col-12">
+                <span>Thanks for visisting!</span>
+                <!-- <p> Stay connected with:</p> -->
+            </div>
+        </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
     <script src="./assets/script.js"></script>
 </body>
 

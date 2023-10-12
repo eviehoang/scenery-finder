@@ -25,7 +25,12 @@ const items = [
         position: 3,
         el: document.getElementById('carousel-item-4')
     },
+    {
+        position: 4,
+        el: document.getElementById('carousel-item-5')
+    }
 ];
+
 
 fetch(unsplashUrl + unsplashKey)
     .then(function (response) {
@@ -34,8 +39,12 @@ fetch(unsplashUrl + unsplashKey)
     })
     .then(function (data) {
         console.log('data', data)
-        items[0].el.children[0].setAttribute("src", data.urls.regular)
+        for(var i=0; i <= 5; i++){
+            items[i].el.children[0].setAttribute("src", data.urls.regular)
+        }
+        
     })
+
 
 fetch(ipstackUrl + ipstackKey)
     .then(function (response) {
@@ -46,6 +55,7 @@ fetch(ipstackUrl + ipstackKey)
         console.log('data', data)
     })
 
+    
 fetch(npsUrl + npsKey)
     .then(function (response) {
         console.log(response)

@@ -8,24 +8,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Flowbite -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Scenery Finder</title>
 </head>
 
 <body>
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-full flex items-center  justify-between p-4">
+        <div class="max-w-full flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 justify-between p-4">
             <div class="flex items-center p-4">
                 <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
-                <div class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white mr-3">Flowbite</div>
-                <!-- Navigation -->
-                <ul
-                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 mr-3">
-                    <li>
-                        <a href="#"
-                            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                            aria-current="page">Home</a>
-                    </li>
-                </ul>
+                <div class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white mr-3">Scenery Finder
+                </div>
+
             </div>
             <!-- Search Area -->
             <form class="columns-3 flex">
@@ -52,15 +49,19 @@
     <main>
         <!-- <div class="bg-gradient-to-r from-cyan-500 to-blue-500"> -->
         <div class="row">
-<!-- 
+            <!-- 
             <div class="col-9" id='carousel'>
                 <h2>Swipe for your next destination</h2>
             </div> -->
             <div class="columns-2 m-3 mt-6">
                 <div class="row-2">
-                    <div class="rounded border-2 border-black" id="welcome">
-                        <h2>Welcome to Scenery</h2>
-                        <p> description of site</p>
+                    <div class="text-center rounded border-2 border-black" id="welcome">
+                        <h2><b>Welcome to Scenery</b></h2>
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                     </div>
                 </div>
                 <div id="controls-carousel" class="relative w-full" data-carousel="static">
@@ -146,14 +147,29 @@
 
     <script src="./assets/script.js"></script>
 
-</body>
-<footer>
-    <div class="row-4 bg-gradient-to-r from-cyan-500 to-blue-500">
-        <div class="col-12 border-2 border-black border-dashed text-center">
-            <span>Thanks for visisting!</span>
-            <p> Stay connected with:</p>
+    <footer class="columns-1 sticky bottom-0 bg-white shadow dark:bg-gray-800 max-w-full bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div class="p-4 md:flex md:items-center md:justify-between">
+            <span class="text-sm text-white sm:text-center">© 2023 <a href="https://flowbite.com/"
+                    class="hover:underline">Flowbite™</a>. All Rights Reserved.
+            </span>
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="#" class="mr-4 hover:underline md:mr-6">Licensing</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:underline">Contact</a>
+                </li>
+            </ul>
         </div>
-    </div>
-</footer>
+    </footer>
+</body>
+
+
 
 </html>

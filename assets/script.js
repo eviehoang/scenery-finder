@@ -1,5 +1,5 @@
 var unsplashUrl = "https://api.unsplash.com/photos/random";
-var unsplashKey = "?client_id=Y7VECVD09iDrQAy00Es7pzryAq1eJHAavoD0b01THRU"
+var unsplashKey = "?client_id="
 
 // Anthony's API key: Y7VECVD09iDrQAy00Es7pzryAq1eJHAavoD0b01THRU
 // Nhi's API key: c-IjSlno3hcniLXjGjNLHmA1cCJdEyXd2CuswiaMydo

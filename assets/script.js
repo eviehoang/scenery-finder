@@ -40,7 +40,7 @@ var items = [
 ];
 
 
-async function carousel(){
+async function carousel() {
     var res1 = await fetch(unsplashUrl + unsplashKey);
     var data1 = await res1.json();
     items[0].el.children[0].setAttribute("src", data1.urls.regular);
@@ -63,107 +63,15 @@ async function carousel(){
 }
 
 carousel();
-    // fetch(unsplashUrl + unsplashKey)
-    //     .then(function (response) {
-    //         console.log(response)
-    //         return response.json();
-    //     })
-    //     .then(function (data) {
-    //         console.log('data', data)
-    //         for (var i = 0; i < 5; i++) {
-    //             items[i].el.children[0].setAttribute("src", data.urls.regular);
-    //             console.log(unsplash[i]);
-    //         }
-    //     })
 
+// Save last search history
+// check for localstorage
+document.getElementById("submitBtn").addEventListener('click', function (event) {
+    event.preventDefault();
+    // get search word
+    var name = userInput.value;
 
-
-
-
-
-
-// forwardBtn.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     // forwardBtn.reload;
-//     fetch(unsplashUrl + unsplashKey)
-//         .then(function (response) {
-//             console.log(response)
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             console.log('data', data)
-//             items[index].el.children[0].setAttribute("src", data.urls.regular);
-//             if(index < 5){
-//                 index++;
-//             } else {
-//                 index = 0;
-//             }
-            
-//         })
-// })
-
-// backBtn.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     // backBtn.reload;
-//     fetch(unsplashUrl + unsplashKey)
-//         .then(function (response) {
-//             console.log(response)
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             console.log('data', data)
-//             for (var i = 0; i < 5; i++) {
-//                 items[i].el.children[0].setAttribute("src", data.urls.regular);
-//                 items[i].el.children[0].setAttribute("alt", data.alt_description);
-//             }
-//         })
-// })
-
-
-
-
-// searchBtn.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     var citySearch = userInput.value;
-//     var spotIpStack;
-
-//      fetch(unsplashUrl + citySearch + unsplashKey, {
-//         method:"GET",
-//      })
-
-//         .then(function (response) {
-//             console.log(response)
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             console.log('data', data)
-//             for (var i = 0; i < 5; i++) {
-//                 items[i].el.children[0].setAttribute("src", data.urls.regular);
-//                 items[i].el.children[0].setAttribute("alt", data.alt_description);
-//             }
-//         }) 
-// ipstackUrl = "http://api.ipstack.com/";
-// ipstackKey = "?access_key=63132bface46b34e5f68472e399ebe92";
-
-// fetch(ipstackUrl + ipstackKey)
-//     .then(function (response) {
-//         console.log(response)
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         console.log('data', data)
-
-//     })
-// })
-
-
-
-// fetch(npsUrl + npsKey)
-//     .then(function (response) {
-//         console.log(response)
-//         return response.json();
-//     })
-//     .then(function (data) {
-//         console.log('data', data)
-//     })
-
+    // Local Storage
+    localStorage.setItem('history', name);
+    localStorage.getItem('history');
+})

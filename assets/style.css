@@ -14,11 +14,10 @@ footer{
 }
 
 #welcome{
-    background: url(./image/pexels-james-wheeler-417074.jpg) no-repeat center center fixed;
-    background-position-y: 100px;
+    background: url(./image/pexels-james-wheeler-417074.jpg) no-repeat center center scroll;
+    margin-top: 2%;
     opacity: .8;
     background-size: cover;
-    margin-top: 3%;
 }
 
 #welcome h2{

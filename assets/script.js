@@ -5,7 +5,7 @@ var ipstackUrl = "http://api.ipstack.com/134.201.250.155";
 var ipstackKey = "?access_key=63132bface46b34e5f68472e399ebe92";
 
 var npsUrl = "https://developer.nps.gov/api/v1/parks?parkCode=acad";
-var npsKey = "&api_key=dAupn5zXkxUdXIomwX4fK9R6zhTDSV7j3bEW5IFp";
+var npsKey = "&api_key= dAupn5zXkxUdXIomwX4fK9R6zhTDSV7j3bEW5IFp";
 
 var userInput = document.getElementById('default-search');
 var searchBtn = document.querySelector('#searchBtn');

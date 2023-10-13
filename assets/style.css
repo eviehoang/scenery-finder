@@ -3,10 +3,12 @@
 }
 
 body{
+    background: url("./pexels-james-wheeler-417074.jpg");
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
+    }
+
 
 footer{
     margin-top: auto;

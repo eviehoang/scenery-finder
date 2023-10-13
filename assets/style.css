@@ -8,6 +8,8 @@ body{
     flex-direction: column;
 }
 
+p{}
+
 footer{
     margin-top: auto;
 }

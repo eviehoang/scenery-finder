@@ -3,6 +3,7 @@
 }
 
 body{
+    /* background-image: url('file:///Users/taylasagerios/Downloads/pexels-pixabay-531880.jpg'); */
     min-height: 100vh;
     display: flex;
     flex-direction: column;

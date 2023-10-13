@@ -1,5 +1,8 @@
 var unsplashUrl = "https://api.unsplash.com/photos/random";
-var unsplashKey = "?client_id=c-IjSlno3hcniLXjGjNLHmA1cCJdEyXd2CuswiaMydo"
+var unsplashKey = "?client_id="
+
+// Anthony's API key: Y7VECVD09iDrQAy00Es7pzryAq1eJHAavoD0b01THRU
+// Nhi's API key: c-IjSlno3hcniLXjGjNLHmA1cCJdEyXd2CuswiaMydo
 
 var npsUrl = "https://developer.nps.gov/api/v1/parks?parkCode=acad";
 var npsKey = "&api_key=dAupn5zXkxUdXIomwX4fK9R6zhTDSV7j3bEW5IFp";
@@ -68,3 +71,4 @@ document.getElementById("submitBtn").addEventListener('click', function (event) 
     localStorage.setItem('history', name);
     localStorage.getItem('history');
 })
+

@@ -49,10 +49,9 @@
 
     <main>
         <div class="row">
-            
             <!-- Website Blurb -->
             <div class="row">
-                <div class="text-center bg-slate-200 p-20" id="welcome">
+                <div class="text-center bg-slate-200 p-40" id="welcome">
                     <h2><b>Welcome to Scenery</b></h2>
                     <p> Welcome to Scenery Finder! This site was created to help you find your next adventure. Scenery
                         Finder was made by three students in a web development bootcamp. The goal was to make a site
@@ -63,7 +62,7 @@
             </div>
         </div>
 
-        <div class="max-w-6xl flex items-center m-3 mt-6">
+        <div class="max-w-8xl flex m-auto mt-4 px-20 py-10">
             <div id="controls-carousel" class="relative w-full" data-carousel="static">
                 <!-- Carousel wrapper -->
                 <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
@@ -122,7 +121,77 @@
                 </button>
             </div>
         </div>
-        <div>
+        <div class="row flex justify-center m-5" id="nationalParks">
+            <div class="columns-3">
+                <div id="park-1">
+                    <div
+                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <img class="rounded-t-lg" src="" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                Park 1</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                                technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            <a href="#"
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Read more
+                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="park-2">
+                    <div
+                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <img class="rounded-t-lg" src="" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                Noteworthy
+                                technology acquisitions 2021</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                                technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            <a href="#"
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Read more
+                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="park-3">
+                    <div
+                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                        <img class="rounded-t-lg" src="" alt="" />
+                        <div class="p-5">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                Noteworthy
+                                technology acquisitions 2021</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
+                                technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            <a href="#"
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Read more
+                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
             <!-- <div id="" class=" modal"> -->
             <!-- modal btn -->
             <!-- modal content -->
@@ -141,7 +210,7 @@
     <script src="./assets/script.js"></script>
 
     <footer
-        class="columns-1 sticky bottom-0 bg-white shadow dark:bg-gray-800 max-w-full bg-gradient-to-r from-cyan-500 to-blue-500">
+        class="columns-1 bottom-0 bg-white shadow dark:bg-gray-800 max-w-full bg-gradient-to-r from-cyan-500 to-blue-500">
         <div class="p-4 md:flex md:items-center md:justify-between">
             <span class="text-sm text-white-500 sm:text-center">© 2023 <a href="https://flowbite.com/"
                     class="hover:underline">Flowbite™</a>. All Rights Reserved.

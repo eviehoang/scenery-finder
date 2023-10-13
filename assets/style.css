@@ -3,11 +3,11 @@
 }
 
 body{
-    /* background-image: url('file:///Users/taylasagerios/Downloads/pexels-pixabay-531880.jpg'); */
+    /* background-image: file("https://www.pexels.com/photo/assorted-map-pieces-2859169/"); */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
+    }
 
 
 footer{

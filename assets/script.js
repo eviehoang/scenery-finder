@@ -62,13 +62,40 @@ carousel();
 
 // Save last search history
 // check for localstorage
+
+// empty string
+var searchHistory = {};
+
+
+
 document.getElementById("submitBtn").addEventListener('click', function (event) {
     event.preventDefault();
+    
     // get search word
     var name = userInput.value;
 
-    // Local Storage
-    localStorage.setItem('history', name);
-    localStorage.getItem('history');
+    getHistory = localStorage.getItem('history')?JSON.parse(localStorage.getItem('history')) : [];
+
+    getHistory.push(searchHistory);
+    localStorage.setItem('history', JSON.stringify(name));
+
+
 })
 
+
+// if(localStorage.getItem('history')){
+//     searchHistory = JSON.parse( localStorage.getItem('history'));
+
+// }
+
+// addHistory(name);
+// console.log(searchHistory);
+
+// function addHistory(dataSaved){
+//     searchHistory.push(dataSaved);
+//     localStorage.setItem('searched', JSON.stringify(searchHistory));
+// }
+
+    // // Local Storage
+    // localStorage.setItem('history', name);
+    // localStorage.getItem('history');

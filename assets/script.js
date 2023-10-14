@@ -64,8 +64,7 @@ carousel();
 // check for localstorage
 
 // empty string
-var searchHistory = {};
-
+var searchHistory = [];
 
 
 document.getElementById("submitBtn").addEventListener('click', function (event) {
@@ -74,13 +73,37 @@ document.getElementById("submitBtn").addEventListener('click', function (event) 
     // get search word
     var name = userInput.value;
 
-    getHistory = localStorage.getItem('history')?JSON.parse(localStorage.getItem('history')) : [];
+    // formatting the name to cut any end spaces
+    name = name.trim();
 
-    getHistory.push(searchHistory);
-    localStorage.setItem('history', JSON.stringify(name));
-
-
+    // Setting local storage with initial key-value pair and adding more values to the key 'history'
+    searchHistory.push(name);
+    if(!localStorage.getItem('history')){
+        localStorage.setItem('history', JSON.stringify(searchHistory));
+    } else {
+        localStorage.setItem('history', JSON.stringify(searchHistory));
+    }
+    
+    
 })
+
+
+
+// document.getElementById("submitBtn").addEventListener('click', function (event) {
+//     event.preventDefault();
+    
+//     // get search word
+//     var name = userInput.value;
+
+
+
+//     getHistory = localStorage.getItem('history')?JSON.parse(localStorage.getItem('history')) : [];
+
+//     getHistory.push(searchHistory);
+//     localStorage.setItem('history', JSON.stringify(name));
+
+
+// })
 
 
 // if(localStorage.getItem('history')){

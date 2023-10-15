@@ -104,13 +104,15 @@ function localParks(){
             var searchYield = document.getElementById("searchYield");
 
             // var des = data.data[i].description;
-            // var name = data.data[i].fullName;
+            var name = data.data[i].name;
             var img = data.data[i].images[2].url;
             var alt = data.data[i].images[2].altText[2];
-            // var placeUrl = data.data[i].url;
+            var placeUrl = data.data[i].url;
 
-            var cardHTML = `<div class="p-5">
-            <img class="aspect-square rounded-full max-w-sm m-auto" src="`+img+`" alt="`+alt+`">
+            var cardHTML = `<div class="p-5 mx-10">
+            <a href="`+placeUrl+`" class="text-center"> <img class="aspect-square rounded-lg max-w-sm m-auto" src="`+img+`" alt="`+alt+`">
+           <h4 class="text-xl m-5">`+name+`</h4>
+           </a>
             </div>`
         
             var card = cardHTML;

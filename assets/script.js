@@ -110,7 +110,7 @@ function localParks(){
             var placeUrl = data.data[i].url;
 
             var cardHTML = `<div class="p-5 mx-10">
-            <a href="`+placeUrl+`" class="text-center"> <img class="aspect-square rounded-lg max-w-sm m-auto" src="`+img+`" alt="`+alt+`">
+            <a href="`+placeUrl+`" class="text-center"> <img class="aspect-square rounded-lg max-w-sm m-auto hover:shadow-xl" src="`+img+`" alt="`+alt+`">
            <h4 class="text-xl m-5">`+name+`</h4>
            </a>
             </div>`

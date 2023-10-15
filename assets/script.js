@@ -4,12 +4,10 @@ var unsplashKey = "?client_id="
 // Anthony's API key: Y7VECVD09iDrQAy00Es7pzryAq1eJHAavoD0b01THRU
 // Nhi's API key: c-IjSlno3hcniLXjGjNLHmA1cCJdEyXd2CuswiaMydo
 
-var npsUrl = "https://developer.nps.gov/api/v1/parks?parkCode=acad";
-var npsKey = "&api_key=dAupn5zXkxUdXIomwX4fK9R6zhTDSV7j3bEW5IFp";
+var npsUrl = "https://developer.nps.gov/api/v1/parks?";
+var npsKey = "?&api_key=dAupn5zXkxUdXIomwX4fK9R6zhTDSV7j3bEW5IFp";
 
 var userInput = document.getElementById('default-search');
-var unsplash = [];
-var index = 0;
 
 
 var items = [
@@ -35,7 +33,7 @@ var items = [
     }
 ];
 
-
+// Chain promising 
 async function carousel() {
     var res1 = await fetch(unsplashUrl + unsplashKey);
     var data1 = await res1.json();
@@ -60,6 +58,37 @@ async function carousel() {
 
 carousel();
 
+async function randomParks(){
+    var rand;
+    var indexNum = [];
+    for(var i=0; i < 3; i++){
+        rand = Math.floor(Math.random() * 49);
+        indexNum.push(rand);
+    }
+
+    console.log(indexNum);
+
+    fetch(npsUrl + npsKey)
+        .then(function (response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log('data', data);
+            for(var i=0; i < 3; i++){
+                var cardId = document.getElementById("park-" + (i+1).toString());
+                console.log(cardId.children[0].children[1].children[0].textContent);
+                console.log(data.data[indexNum[i]].name);
+                cardId.children[0].children[1].children[0].textContent = data.data[indexNum[i]].name;
+                cardId.children[0].children[1].children[1].textContent = data.data[indexNum[i]].description;
+                cardId.children[0].children[1].children[2].setAttribute('href', data.data[indexNum[i]].url)
+                
+            }
+        })
+
+}
+
+randomParks();
+
 // Save last search history
 // check for localstorage
 
@@ -77,14 +106,9 @@ document.getElementById("submitBtn").addEventListener('click', function (event) 
     name = name.trim();
 
     // Setting local storage with initial key-value pair and adding more values to the key 'history'
-    searchHistory.push(name);
-    if(!localStorage.getItem('history')){
-        localStorage.setItem('history', JSON.stringify(searchHistory));
-    } else {
-        localStorage.setItem('history', JSON.stringify(searchHistory));
-    }
-    
-    
+    searchHistory.push(name);   
+    localStorage.setItem('history', JSON.stringify(searchHistory));
+
 })
 
 

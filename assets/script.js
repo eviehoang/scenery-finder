@@ -128,17 +128,21 @@ function localParks(){
 
 // Save last search history
 // check for localstorage
-
 // empty string
 var searchHistory = [];
 
 document.getElementById("submitBtn").addEventListener('click', function (event) {
     event.preventDefault();
-    searchYield.innerHTML = ""; // Clear existing content before adding new cards
-    localParks();
 
-    // move to destinations
+    // Clear existing content before adding new cards
+    searchYield.innerHTML = ""; 
+
+    // Add Destination
+    localParks();
     location.href="#destination";
+    document.getElementById("destination").style.display = "block";
+
+    
     // get search word
     var name = userInput.value;
 
@@ -151,38 +155,3 @@ document.getElementById("submitBtn").addEventListener('click', function (event) 
 
 })
 
-
-
-// document.getElementById("submitBtn").addEventListener('click', function (event) {
-//     event.preventDefault();
-    
-//     // get search word
-//     var name = userInput.value;
-
-
-
-//     getHistory = localStorage.getItem('history')?JSON.parse(localStorage.getItem('history')) : [];
-
-//     getHistory.push(searchHistory);
-//     localStorage.setItem('history', JSON.stringify(name));
-
-
-// })
-
-
-// if(localStorage.getItem('history')){
-//     searchHistory = JSON.parse( localStorage.getItem('history'));
-
-// }
-
-// addHistory(name);
-// console.log(searchHistory);
-
-// function addHistory(dataSaved){
-//     searchHistory.push(dataSaved);
-//     localStorage.setItem('searched', JSON.stringify(searchHistory));
-// }
-
-    // // Local Storage
-    // localStorage.setItem('history', name);
-    // localStorage.getItem('history');

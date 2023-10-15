@@ -2,32 +2,25 @@
     font-family: 'Young Serif', serif;
 }
 
-body{
+p {
+    font-family: 'DM Mono', monospace;
+    font-weight: bolder;
+}
+
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    }
+}
 
 
-footer{
+footer {
     margin-top: auto;
 }
 
-#welcome{
-    background: url(./image/pexels-james-wheeler-417074.jpg) no-repeat center center scroll;
-    margin-top: 2%;
-    opacity: .8;
+#welcome {
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2)) , url(./image/pexels-james-wheeler-417074.jpg) no-repeat center center scroll;
+    margin-top: 0;
+    background-color: black;
     background-size: cover;
 }
-
-#welcome h2{
-    opacity: 1;
-    font-size: 3em;
-    color: white;
-}
-
-#welcome p{
-    opacity: 1;
-    color: white;
-}
-

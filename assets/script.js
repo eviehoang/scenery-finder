@@ -89,16 +89,50 @@ async function randomParks(){
 
 randomParks();
 
+// Parks by location
+function localParks(){
+    var location = userInput.value;
+    var searchQuery = npsUrl + "limit=6&q=" + location + npsKey;
+
+    fetch(searchQuery)
+        .then(function (response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log('data', data);
+            for(var i=0; i <=6; i++){
+            var searchYield = document.getElementById("searchYield");
+            searchYield.append(card);
+
+                const cardHTML = `<a href="#" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg" alt="">
+                        <div class="flex flex-col justify-between p-4 leading-normal">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                        </div>
+                    </></a>;`
+
+            var card = cardHTML;
+            
+
+            }
+        })
+
+}
+
+
+
+
+
 // Save last search history
 // check for localstorage
 
 // empty string
 var searchHistory = [];
 
-
 document.getElementById("submitBtn").addEventListener('click', function (event) {
     event.preventDefault();
-    
+    localParks();
     // get search word
     var name = userInput.value;
 

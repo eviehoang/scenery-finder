@@ -16,3 +16,15 @@ body{
 footer{
     margin-top: auto;
 }
+
+#welcome {
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2)) , url(./image/pexels-james-wheeler-417074.jpg) no-repeat center center scroll;
+    margin-top: 0;
+    background-color: black;
+    background-size: cover;
+}
+
+#howTo{
+    margin: 0 20%;
+    padding: 4%;
+}

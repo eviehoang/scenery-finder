@@ -100,25 +100,19 @@ function localParks(){
         })
         .then(function(data){
             console.log('data', data);
-            for(var i=0; i <= 6; i++){
+            for(var i=0; i <= 5; i++){
             var searchYield = document.getElementById("searchYield");
 
-            var des = data.data[i].description;
-            var name = data.data[i].fullName;
+            // var des = data.data[i].description;
+            // var name = data.data[i].fullName;
             var img = data.data[i].images[2].url;
             var alt = data.data[i].images[2].altText[2];
-            var placeUrl = data.data[i].url;
+            // var placeUrl = data.data[i].url;
 
-            console.log(des);
-            const cardHTML = `<div class="m-auto"><a href="`+placeUrl+`" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img class="object-cover w-auto rounded-t-lg h-full md:h-full md:w-48 md:rounded-none md:rounded-l-lg" src="`+img+`" alt="`+alt+`">
-            <div class="flex flex-col justify-between p-4 leading-normal">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">`+name+`</h5>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">`+des+`</p>
-            </div>
-             </a></div>`
+            var cardHTML = `<div class="p-5">
+            <img class="aspect-square rounded-full max-w-sm m-auto" src="`+img+`" alt="`+alt+`">
+            </div>`
         
-
             var card = cardHTML;
             searchYield.innerHTML += card;
 

@@ -1,19 +1,20 @@
 * {
     font-family: 'Young Serif', serif;
 }
-/* header{
 
-} */
+p {
+    font-family: 'DM Mono', monospace;
+    font-weight: bolder;
+}
 
-body{
-    background: url("./pexels-james-wheeler-417074.jpg");
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    }
+}
 
 
-footer{
+footer {
     margin-top: auto;
 }
 

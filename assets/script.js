@@ -81,7 +81,7 @@ async function randomParks(){
                 cardId.children[0].children[1].children[0].textContent = data.data[indexNum[i]].name;
                 cardId.children[0].children[1].children[1].textContent = data.data[indexNum[i]].description;
                 cardId.children[0].children[1].children[2].setAttribute('href', data.data[indexNum[i]].url)
-                
+                cardId.children[0].children[0].setAttribute('src', data.data[indexNum[i]].images[0].url)
             }
         })
 

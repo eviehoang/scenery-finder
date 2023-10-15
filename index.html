@@ -10,17 +10,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Young+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Scenery Finder</title>
 </head>
 
 <body>
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-full flex items-center bg-gradient-to-r from-cyan-500 to-blue-500 justify-between p-4">
-            <div class="flex items-center p-4">
-                <img src="./assets/image/final-logo.png" class="h-20 mr-3" alt="Flowbite Logo" />
-                <div class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white mr-3">Scenery Finder
+    <nav class="bg-white">
+        <div class="max-w-full flex items-center bg-emerald-900 justify-between p-3">
+            <div class="flex items-center p-2">
+                <img src="./assets/image/final-logo.png" class="h-20 mr-3" alt="SF-Logo" />
+                <div class="self-center text-5xl font-semibold whitespace-nowrap dark:text-white mr-3">Scenery Finder
                 </div>
 
             </div>
@@ -37,10 +37,10 @@
                         </svg>
                     </div>
                     <input type="search" id="default-search"
-                        class="block p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="block p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-emerald-500 focus:border-emerald-500 dark:bg-emerald-700 dark:border-white dark:placeholder-gray-100 dark:text-white dark:focus:ring-emerald-500 dark:focus:border-emerald-500"
                         placeholder="Search Location..." required style="width: 350px;">
                     <button type="submit"
-                        class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        class="text-white absolute right-2.5 bottom-2.5 bg-emerald-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-emerald-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-emerald-800"
                         id="submitBtn">Search</button>
                 </div>
             </form>
@@ -48,16 +48,20 @@
     </nav>
 
     <main>
-        <section class="row">
+        <section>
             <!-- Website Blurb -->
             <div class="row">
                 <div class="text-center bg-slate-200 p-40" id="welcome">
-                    <h2><b>Welcome to Scenery</b></h2>
-                    <p> Welcome to Scenery Finder! This site was created to help you find your next adventure. Scenery
-                        Finder was made by three students in a web development bootcamp. The goal was to make a site
-                        that could help others. The creators wanted to make a site that fit their interest in the hope
-                        of helping someone else out. This site is filled with photos and links to help you find your
-                        next adventure. Hope you enjoy it!</p>
+                    <div id="whiteText">
+                        <h2 class="text-5xl text-white">Welcome to Scenery</h2>
+                        <p class="text-white p-3"> Welcome to Scenery Finder! This site was created to help you find your next adventure.
+                            Scenery
+                            Finder was made by three students in a web development bootcamp. The goal was to make a site
+                            that could help others. The creators wanted to make a site that fit their interest in the
+                            hope
+                            of helping someone else out. This site is filled with photos and links to help you find your
+                            next adventure. Hope you enjoy it!</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -122,83 +126,88 @@
             </div>
         </div>
 
-        <!-- Info Cards -->
+        <!-- Random Parks Info Cards -->
+        <section class="bg-emerald-700 text-center p-5">
+            <h4 class="text-4xl p-3 text-white">Explore!</h4>
+            <p class="text-white">Don't know where to go? How about checking out one of these destination!</p>
 
-        <section class="columns-3 px-5 py-8 flex flex-start bg-emerald-800" id="nationalParks">
-            <article class="m-auto">
-                <div id="park-1">
-                    <div
-                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg" src="" alt="" />
-                        <div class="p-5">
-                            <h4 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white p-2">
-                                Park 1</h4>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                                technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                            <a href="#"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more
-                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
+            <article class="px-5 py-6 flex justify-between" id="nationalParks">
+                <div class="mx-auto">
+                    <div id="park-1">
+                        <div class="max-w-sm bg-zinc-800 border border-zinc-900 rounded-lg shadow">
+                            <img class="rounded-t-lg" src="" alt="" />
+                            <div class="p-5">
+                                <h4 class="mb-2 text-4xl font-bold tracking-tight text-gray-800 dark:text-white p-2">
+                                    Park 1</h4>
+                                <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">Here are the biggest
+                                    enterprise
+                                    technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-cyan-700 rounded-lg hover:bg-cyan-800 focus:ring-4">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <article class="m-auto">
-                <div id="park-2">
-                    <div
-                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg" src="" alt="" />
-                        <div class="p-5">
-                            <h4 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white p-2">
-                                Park 2</h4>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                                technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                            <a href="#"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more
-                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
+                <div class="mx-auto">
+                    <div id="park-2">
+                        <div class="max-w-sm bg-zinc-800 border border-zinc-900 rounded-lg shadow">
+                            <img class="rounded-t-lg" src="" alt="" />
+                            <div class="p-5">
+                                <h4 class="mb-2 text-4xl font-bold tracking-tight text-gray-800 dark:text-white p-2">
+                                    Park 2</h4>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise
+                                    technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-cyan-700 rounded-lg hover:bg-cyan-800 focus:ring-4">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </article>
 
-            <article class="m-auto">
-                <div id="park-3">
-                    <div
-                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg" src="" alt="" />
-                        <div class="p-5">
-                            <h4 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white p-2">
-                                Park 3</h4>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-                                technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                            <a href="#"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more
-                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
+                <div class="mx-auto">
+                    <div id="park-3">
+                        <div class="max-w-sm bg-zinc-800 border border-zinc-900 rounded-lg shadow">
+                            <img class="rounded-t-lg" src="" alt="" />
+                            <div class="p-5">
+                                <h4 class="mb-2 text-4xl font-bold tracking-tight text-gray-800 dark:text-white p-2">
+                                    Park 3</h4>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest
+                                    enterprise
+                                    technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                                <a href="#"
+                                    class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-cyan-700 rounded-lg hover:bg-cyan-800 focus:ring-4">
+                                    Read more
+                                    <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </article>
         </section>
 
-        <section class="text-center m-3 p-5" id="destination">
+        <!-- Future Destination -->
+        <section class="text-center m-3 p-5" id="destination" style="display: none;">
             <h3 class="text-4xl">Future Destinations</h3>
         </section>
 
@@ -209,12 +218,12 @@
         </section>
     </main>
 
-    <footer class="columns-1 bottom-0 bg-white shadow dark:bg-gray-800 max-w-full bg-gradient-to-r from-cyan-500 to-blue-500">
+    <footer class="columns-1 bottom-0 mt-10 bg-emerald-900 p-5">
         <div class="p-4 md:flex md:items-center md:justify-between">
-            <span class="text-sm text-white-500 sm:text-center">© 2023 <a href="https://flowbite.com/"
+            <span class="text-sm text-white sm:text-center">© 2023 <a href="https://flowbite.com/"
                     class="hover:underline">Flowbite™</a>. All Rights Reserved.
             </span>
-            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white-500 sm:mt-0">
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
                 <li>
                     <a href="#" class="mr-4 hover:underline md:mr-6 ">About</a>
                 </li>

@@ -24,3 +24,9 @@ footer {
     background-color: black;
     background-size: cover;
 }
+
+#howTo{
+    color: white;
+    margin: 0;
+    padding: 5%;
+}

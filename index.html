@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <nav class="bg-white">
+    <nav class="bg-white sticky top-0">
         <div class="max-w-full flex items-center bg-emerald-900 justify-between p-3">
             <div class="flex items-center p-2">
                 <img src="./assets/image/final-logo.png" class="h-20 mr-3" alt="SF-Logo" />
@@ -53,8 +53,9 @@
             <div>
                 <div class="flex justify-center text-center bg-slate-200 p-40" id="welcome">
                     <div class="max-w-xl">
-                        <h2 class="text-5xl text-white">Welcome to Scenery</h2>
-                        <p class="text-white p-3"> Welcome to Scenery Finder! This site was created to help you find your next adventure.
+                        <h2 class="text-5xl text-white">Welcome to Scenery Finder</h2>
+                        <p class="text-white p-3"> Welcome to Scenery Finder! This site was created to help you find
+                            your next adventure.
                             Scenery
                             Finder was made by three students in a web development bootcamp. The goal was to make a site
                             that could help others. The creators wanted to make a site that fit their interest in the
@@ -66,66 +67,66 @@
             </div>
         </section>
 
-        <div class="max-w-8xl flex m-auto mt-4 px-20 py-10">
-            <div id="controls-carousel" class="relative w-full" data-carousel="static">
-                <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                    <!-- Item 1 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-1">
-                        <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="...">
+        <section class="max-w-7xl flex flex-col text-center m-auto mt-4 px-20 py-10">
+                <div><h4 class="text-4xl p-3 text-zinc-800 ">Onwards to New Adventures</h4></div>
+                <div id="controls-carousel" class="relative w-full" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-1">
+                            <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item="active" id="carousel-item-2">
+                            <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-3">
+                            <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-4">
+                            <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-5">
+                            <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="...">
+                        </div>
                     </div>
-                    <!-- Item 2 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active" id="carousel-item-2">
-                        <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="...">
-                    </div>
-                    <!-- Item 3 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-3">
-                        <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="...">
-                    </div>
-                    <!-- Item 4 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-4">
-                        <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="...">
-                    </div>
-                    <!-- Item 5 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item id="carousel-item-5">
-                        <img src="" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="...">
-                    </div>
+                    <!-- Slider controls -->
+                    <button id="back-button"
+                        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button id="forward-button"
+                        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
                 </div>
-                <!-- Slider controls -->
-                <button id="back-button"
-                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-prev>
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M5 1 1 5l4 4" />
-                        </svg>
-                        <span class="sr-only">Previous</span>
-                    </span>
-                </button>
-                <button id="forward-button"
-                    class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                    data-carousel-next>
-                    <span
-                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-white dark:text-gray-800" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 9 4-4-4-4" />
-                        </svg>
-                        <span class="sr-only">Next</span>
-                    </span>
-                </button>
-            </div>
-        </div>
-
+        </section>
         <!-- Random Parks Info Cards -->
         <section class="bg-emerald-800 text-center p-5">
             <h4 class="text-4xl p-3 text-white">Explore!</h4>
@@ -206,15 +207,20 @@
             </article>
         </section>
 
+        <!-- Search! -->
+        <section class="text-center m-3 p-5 bg-zinc-800" id="howTo">
+            <h3 class="text-4xl text-zinc-800">What Next?</h3>
+            <p class="p-3">Begin searching for your next destination now! Simply enter your state or city in the search
+                bar and see if there's any national parks near you.</p>
+        </section>
+
         <!-- Future Destination -->
-        <section class="text-center m-3 p-5" id="destination" style="display: none;">
-            <h3 class="text-4xl">Future Destinations</h3>
+        <section class="text-center m-3 p-5 text-zinc-800" id="destination" style="display: none;">
+            <h3 class="text-4xl">Your Scenic Destinations</h3>
         </section>
 
         <section class="flex flex-wrap justify-center m-auto" id="searchYield">
-
             <!-- Search Results -->
-
         </section>
     </main>
 
@@ -225,7 +231,8 @@
             </span>
             <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-white sm:mt-0">
                 <li>
-                    <a href="https://eviehoang.github.io/scenery-finder/" class="mr-4 hover:underline md:mr-6 ">Repository</a>
+                    <a href="https://eviehoang.github.io/scenery-finder/"
+                        class="mr-4 hover:underline md:mr-6 ">Repository</a>
                 </li>
             </ul>
         </div>

@@ -81,7 +81,7 @@ async function randomParks(){
                 cardId.children[0].children[1].children[0].textContent = data.data[indexNum[i]].name;
                 cardId.children[0].children[1].children[1].textContent = data.data[indexNum[i]].description;
                 cardId.children[0].children[1].children[2].setAttribute('href', data.data[indexNum[i]].url)
-                
+                cardId.children[0].children[0].setAttribute('src', data.data[indexNum[i]].images[0].url)
             }
         })
 
@@ -89,16 +89,56 @@ async function randomParks(){
 
 randomParks();
 
+// Parks by location
+function localParks(){
+    var location = userInput.value;
+    var searchQuery = npsUrl + "&q=" + location + npsKey;
+
+    fetch(searchQuery)
+        .then(function (response){
+            return response.json();
+        })
+        .then(function(data){
+            console.log('data', data);
+            for(var i=0; i <= 5; i++){
+            var searchYield = document.getElementById("searchYield");
+
+            // var des = data.data[i].description;
+            var name = data.data[i].name;
+            var img = data.data[i].images[2].url;
+            var alt = data.data[i].images[2].altText[2];
+            var placeUrl = data.data[i].url;
+
+            var cardHTML = `<div class="p-5 mx-10">
+            <a href="`+placeUrl+`" class="text-center"> <img class="aspect-square rounded-lg max-w-sm m-auto hover:shadow-xl" src="`+img+`" alt="`+alt+`">
+           <h4 class="text-xl m-5">`+name+`</h4>
+           </a>
+            </div>`
+        
+            var card = cardHTML;
+            searchYield.innerHTML += card;
+
+            }
+        })
+        .catch(function (error) {
+            console.error('Error:', error);
+        });
+}
+
+
 // Save last search history
 // check for localstorage
 
 // empty string
 var searchHistory = [];
 
-
 document.getElementById("submitBtn").addEventListener('click', function (event) {
     event.preventDefault();
-    
+    searchYield.innerHTML = ""; // Clear existing content before adding new cards
+    localParks();
+
+    // move to destinations
+    location.href="#destination";
     // get search word
     var name = userInput.value;
 

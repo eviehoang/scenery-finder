@@ -100,43 +100,33 @@ function localParks(){
         })
         .then(function(data){
             console.log('data', data);
-            for(var i=0; i <=6; i++){
+            for(var i=0; i <= 6; i++){
             var searchYield = document.getElementById("searchYield");
-            searchYield.innerHTML = card;
 
-            var description = data.data[i].description;
-            var name = data.data[i].name;
+            var des = data.data[i].description;
+            var name = data.data[i].fullName;
             var img = data.data[i].images[2].url;
+            var alt = data.data[i].images[2].altText[2];
+            var placeUrl = data.data[i].url;
 
-                const cardHTML = `<article class="m-auto">
-                <div id="card">
-                    <div
-                        class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                        <img class="rounded-t-lg" src="`+img+`" alt="" />
-                        <div class="p-5">
-                            <h4 class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white p-2">
-                            `+name+`</h4>
-                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">`+description+`</p>
-                            <a href="#"
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more
-                                <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </article>`
+            console.log(des);
+            const cardHTML = `<div class="m-auto"><a href="`+placeUrl+`" class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <img class="object-cover w-auto rounded-t-lg h-full md:h-full md:w-48 md:rounded-none md:rounded-l-lg" src="`+img+`" alt="`+alt+`">
+            <div class="flex flex-col justify-between p-4 leading-normal">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">`+name+`</h5>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">`+des+`</p>
+            </div>
+             </a></div>`
+        
 
             var card = cardHTML;
-            
+            searchYield.innerHTML += card;
 
             }
         })
-
+        .catch(function (error) {
+            console.error('Error:', error);
+        });
 }
 
 
@@ -148,7 +138,11 @@ var searchHistory = [];
 
 document.getElementById("submitBtn").addEventListener('click', function (event) {
     event.preventDefault();
+    searchYield.innerHTML = ""; // Clear existing content before adding new cards
     localParks();
+
+    // move to destinations
+    location.href="#destination";
     // get search word
     var name = userInput.value;
 

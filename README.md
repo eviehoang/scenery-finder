@@ -1,4 +1,6 @@
 # Scenery-Finder
+![](assets/image/web-sshot.png)
+Scenery Finder is a user-friendly application that seamlessly combines two APIs and three libraries to help users quickly discover parks and activities in their chosen cities. This app fills a gap in the market by merging a comprehensive directory of local scenic spots and popular attractions, and activities, all in one place. Unlike existing options, which often require users to navigate multiple websites and apps, Scenery Finder simplifies the process by sourcing data from APIs and consolidating them in one attractive format. This ensures accessibility for users with varying levels of digital literacy.
 
 ## Technology Used
 
@@ -19,7 +21,7 @@ Making a Scenery-Finder app for aesthetic location near user.
 Deployed Site [https://eviehoang.github.io/scenery-finder/](https://eviehoang.github.io/scenery-finder/)
 
 ## Sample Code
-
+Chain Promising for information push to a carousel:
 ```js
 // Chain promising 
 async function carousel() {
@@ -31,7 +33,7 @@ async function carousel() {
 }
 ```
 
-
+Function to add cards to the HTML via Javascript:
 ```js
 // Parks by location
 function localParks(){
@@ -87,7 +89,12 @@ function localParks(){
 
 ## Credits
 
-N/A
+* [Tailwind](https://tailwindcss.com/docs/installation) and [Flowbite](https://flowbite.com/docs/) for CSS presets
+* [Vengage](https://venngage.com/blog/accessible-colors/) for providing inspiration for websafe accesibile colors.
+* [Unsplash](https://unsplash.com) for providing images and API
+* [W3School](w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons) for example codes and educational references.
+* [National Park Servicies](https://www.nps.gov/subjects/developer/api-documentation.htm#/) for providing images,data, and API
+
 
 ## License
 

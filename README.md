@@ -12,7 +12,9 @@ Scenery Finder is a user-friendly application that seamlessly combines two APIs 
 | Javascript | [https://developer.mozilla.org/en-US/docs/Web/JavaScript/]|(https://developer.mozilla.org/en-US/docs/Web/JavaScript)  
 | Tailwind CSS | [https://tailwindcss.com/] | (https://tailwindcss.com/)
 | Flowbite CSS | [https://flowbite.com/docs/] | (https://flowbite.com/docs/)
-| Google Font | [https://developers.google.com/fonts/docs/getting_started] | (https://developers.google.com/fonts/docs/getting_started)
+| Google Font API | [https://developers.google.com/fonts/docs/getting_started] | (https://developers.google.com/fonts/docs/getting_started)
+| National Park API | [https://www.nps.gov/subjects/developer/api-documentation.htm] | (https://www.nps.gov/subjects/developer/api-documentation.htm)
+| Unsplash API | [https://unsplash.com/documentation] | (https://unsplash.com/documentation)
 
 ## Description
 

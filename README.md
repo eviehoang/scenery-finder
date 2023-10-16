@@ -25,13 +25,16 @@ Deployed Site [https://eviehoang.github.io/scenery-finder/](https://eviehoang.gi
 ## Sample Code
 Chain Promising for information push to a carousel:
 ```js
-// Chain promising 
+// Chain promising to request multiple images from national park api to set into the carousel
 async function carousel() {
-    var res1 = await fetch(unsplashUrl + unsplashKey);
-    var data1 = await res1.json();
-    items[0].el.children[0].setAttribute("src", data1.urls.regular);
-    items[0].el.children[0].setAttribute("alt", data1.description);
-    
+    for(var i=0; i < items.length; i++){
+        var res1 = await fetch(unsplashUrl + unsplashKey);
+        var data1 = await res1.json();
+
+        // Traversing the DOM to set attributes
+        items[i].el.children[0].setAttribute("src", data1.urls.regular);
+        items[0].el.children[0].setAttribute("alt", data1.description);
+    }
 }
 ```
 
@@ -51,7 +54,6 @@ function localParks(){
             for(var i=0; i <= 5; i++){
             var searchYield = document.getElementById("searchYield");
 
-            // var des = data.data[i].description;
             var name = data.data[i].name;
             var img = data.data[i].images[2].url;
             var alt = data.data[i].images[2].altText[2];
